@@ -9,10 +9,11 @@ namespace Girls.Gama2
     class Program
     {
         private static List<Boleto> listaBoletos;
+        private static List<Dinheiro> listaDinheiro;
         static void Main(string[] args)
         {
             listaBoletos = new List<Boleto>();
-
+            listaDinheiro = new List<Dinheiro>();
             while (true)
             {
                 Console.WriteLine("================== Loja das meninas da Gama Academy ============================");
@@ -76,6 +77,7 @@ namespace Girls.Gama2
             var dinheiro = new Dinheiro(cpf, valor, descricao, valorPago);
             dinheiro.GerarPagamento();
             var troco = valorPago - valor;
+            listaDinheiro.Add(dinheiro);
 
             Console.WriteLine($"Devolver troco no valor de: {troco}"); 
             Console.WriteLine($"Pagamento em dinheiro no valor de {dinheiro.Valor} realizado com sucesso");
@@ -125,7 +127,7 @@ namespace Girls.Gama2
         public static void Relatorio()
         {
             Console.WriteLine("Qual opção de relatório:");
-            Console.WriteLine("1-Pagos | 2-À pagar | 3-Vencidos");
+            Console.WriteLine("1-Pagos | 2-À pagar | 3-Vencidos | 4-Dinheiro");
 
             var opcao = int.Parse(Console.ReadLine());
 
@@ -139,6 +141,9 @@ namespace Girls.Gama2
                     break;
                 case 3:
                     BoletosVencidos();
+                    break;
+                 case 4:
+                    RelatorioDinheiro();
                     break;
                 default:
                     break;
@@ -193,6 +198,21 @@ namespace Girls.Gama2
             }
 
             Console.WriteLine("========== Boletos vencidos ============ \n");
+        }
+
+        public static void  RelatorioDinheiro()
+        {
+            var lista = listaDinheiro.ToList();
+            Console.WriteLine("========== Pagamentos em dinheiro ============");
+
+            foreach (var item in lista)
+            {
+                Console.WriteLine("\n ====");
+                Console.WriteLine($"Valor:{item.Valor}\nData Pagamento: {item.Data} ==");
+            }
+
+            Console.WriteLine("========== Boletos vencidos ============ \n");
+        
         }
     }
 }

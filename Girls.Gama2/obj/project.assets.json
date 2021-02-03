@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas .net\\Girls.Gama2\\Girls.Gama2.csproj",
+      "projectUniqueName": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas-net\\Girls.Gama2\\Girls.Gama2.csproj",
       "projectName": "Girls.Gama2",
-      "projectPath": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas .net\\Girls.Gama2\\Girls.Gama2.csproj",
+      "projectPath": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas-net\\Girls.Gama2\\Girls.Gama2.csproj",
       "packagesPath": "C:\\Users\\giova\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas .net\\Girls.Gama2\\obj\\",
+      "outputPath": "C:\\Users\\giova\\Desktop\\Gama Academy\\aulas-net\\Girls.Gama2\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\giova\\AppData\\Roaming\\NuGet\\NuGet.Config",
